@@ -1,4 +1,4 @@
-# Wenmoon Extension Build
+# Wenmoon Extension
 
 ![Wenmoon](wenmoon.png)
 
@@ -22,7 +22,7 @@ That's it! The extension is ready to use.
 ## What's Included
 
 - **Pre-built extension**: The `dist` folder contains the ready-to-use Chrome extension
-- **Installation guide**: See `CHROME_EXTENSION_README.md` for detailed Chrome installation instructions
+- **Installation guide**: See [CHROME_EXTENSION_README.md](CHROME_EXTENSION_README.md) for detailed Chrome installation instructions
 - **Latest version**: The extension is automatically updated with the latest features
 
 ## Extension Features
@@ -61,6 +61,6 @@ This will:
 
 ## Support
 
-- **Installation issues**: See `CHROME_EXTENSION_README.md`
+- **Installation issues**: See [CHROME_EXTENSION_README.md](CHROME_EXTENSION_README.md)
 - **Extension problems**: Check the Chrome DevTools console
 - **Build issues**: Contact the development team 
