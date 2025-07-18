@@ -1,5 +1,7 @@
 # Wenmoon Extension Build
 
+![Wenmoon](wenmoon.png)
+
 This repository contains the pre-built wenmoon-extension for Chrome browser installation.
 
 ## Quick Start
