@@ -5,29 +5,38 @@ This guide explains how to load the pre-built wenmoon-extension as an unpacked C
 ## Prerequisites
 
 - **Google Chrome** browser installed
-- **Pre-built dist folder** (provided by admin)
+- **Git** (to clone the repository)
 
-## Loading the Extension
+## Getting Started
 
-### Step 1: Open Chrome Extensions Page
+### Step 1: Clone the Repository
+
+1. Open your terminal/command prompt
+2. Clone the repository:
+   ```bash
+   git clone https://github.com/Moon-Corp/wenmoon-extension-build.git
+   cd wenmoon-extension-build
+   ```
+
+### Step 2: Open Chrome Extensions Page
 
 1. Open Google Chrome
 2. Navigate to `chrome://extensions/` in the address bar
 3. Or go to **Menu** → **More tools** → **Extensions**
 
-### Step 2: Enable Developer Mode
+### Step 3: Enable Developer Mode
 
 1. In the top-right corner of the extensions page, toggle **"Developer mode"** to ON
 2. This will reveal additional options for loading unpacked extensions
 
-### Step 3: Load the Extension
+### Step 4: Load the Extension
 
 1. Click the **"Load unpacked"** button
-2. In the file picker dialog, navigate to the directory containing the `dist` folder
+2. In the file picker dialog, navigate to the `wenmoon-extension-build` directory you just cloned
 3. Select the **`dist`** folder (not the parent directory)
 4. Click **"Select Folder"**
 
-### Step 4: Verify Installation
+### Step 5: Verify Installation
 
 1. The extension should now appear in your extensions list
 2. You should see the wenmoon extension icon in your Chrome toolbar
@@ -50,6 +59,7 @@ Once loaded, the wenmoon extension will:
 - **"Manifest file is missing or unreadable"**: Make sure you selected the `dist` folder, not a parent directory
 - **"Extension is invalid"**: Ensure the `dist` folder contains valid extension files
 - **"Cannot load extension"**: Check that Developer mode is enabled
+- **"Repository not found"**: Make sure you have access to the GitHub repository
 
 ### Extension Not Working
 
@@ -62,7 +72,10 @@ Once loaded, the wenmoon extension will:
 
 When a new version is available:
 
-1. Get the updated `dist` folder from the admin
+1. Pull the latest changes from the repository:
+   ```bash
+   git pull origin main
+   ```
 2. In Chrome extensions page, click the **refresh icon** on the wenmoon extension
 3. Or reload the extension by clicking **"Reload"**
 
@@ -86,4 +99,4 @@ If you encounter issues:
 1. Check the Chrome DevTools console for error messages
 2. Verify the extension files are complete in the `dist` folder
 3. Try reloading the extension
-4. Contact the admin if the extension files appear corrupted 
+4. Check the main README.md for additional troubleshooting steps 

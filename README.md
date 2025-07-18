@@ -1,75 +1,64 @@
-# Wenmoon Build Setup
+# Wenmoon Extension Build
 
-This repository contains a setup script to build and deploy the wenmoon-extension using Git submodules.
+This repository contains the pre-built wenmoon-extension for Chrome browser installation.
 
-## Prerequisites
+## Quick Start
 
-Before running the setup script, make sure you have the following installed:
-
-- **Git**: For managing submodules
-- **Yarn**: For installing dependencies and building the extension
-- **SSH Key**: Configured with GitHub for accessing the private repository
-
-## Initial Setup
-
-If you're setting up this repository for the first time, follow these steps:
-
-1. **Initialize Git repository** (if not already done):
+1. **Clone this repository**:
    ```bash
-   git init
+   git clone https://github.com/Moon-Corp/wenmoon-extension-build.git
+   cd wenmoon-extension-build
    ```
 
-2. **Add the wenmoon-extension submodule**:
-   ```bash
-   git submodule add git@github.com:Moon-Corp/wenmoon-extension.git wenmoon-extension
-   ```
+2. **Load the extension in Chrome**:
+   - Open Chrome and go to `chrome://extensions/`
+   - Enable "Developer mode"
+   - Click "Load unpacked" and select the `dist` folder
 
-3. **Run the setup script**:
-   ```bash
-   ./setup.sh
-   ```
+That's it! The extension is ready to use.
 
-## Usage
+## What's Included
 
-After the initial setup, you can simply run:
+- **Pre-built extension**: The `dist` folder contains the ready-to-use Chrome extension
+- **Installation guide**: See `CHROME_EXTENSION_README.md` for detailed Chrome installation instructions
+- **Latest version**: The extension is automatically updated with the latest features
 
-```bash
-./setup.sh
-```
+## Extension Features
 
-## What the script does
+The wenmoon extension provides:
 
-1. **Initializes submodules**: Uses `git submodule init` and `git submodule update` to fetch the wenmoon-extension
-2. **Installs dependencies**: Runs `yarn install` to install all required packages
-3. **Builds the extension**: Runs `yarn run build` to create the production build
-4. **Copies the dist folder**: Moves the built `dist` folder to the current directory
+- **Solana Wallet Authentication**: Connect your Solana wallet (like Phantom, Solflare, etc.)
+- **Twitter/X Integration**: Launch tokens directly from Twitter/X posts
+- **One-Click Token Launching**: Instant token launching through your connected wallet
+- **Secure Wallet Connection**: Safe wallet connection without compromising private keys
+- **Cross-Platform Support**: Works with different Solana wallet providers
 
 ## Repository Structure
 
-The wenmoon-extension is managed as a Git submodule in the `wenmoon-extension/` directory. This approach provides:
+```
+wenmoon-extension-build/
+├── dist/                    # Pre-built Chrome extension
+├── wenmoon-extension/       # Source code (Git submodule)
+├── setup.sh                 # Build script (for admins)
+├── README.md               # This file
+└── CHROME_EXTENSION_README.md  # Chrome installation guide
+```
 
-- **Version control**: The submodule points to a specific commit
-- **Clean separation**: The extension code is separate from the build setup
-- **Easy updates**: You can update the submodule to get the latest version
+## For Developers/Admins
 
-## Output
-
-After successful execution, you'll have a `dist` folder in the current directory containing the built wenmoon-extension.
-
-## Updating the Extension
-
-To update to the latest version of the wenmoon-extension:
+If you need to rebuild the extension:
 
 ```bash
-git submodule update --remote wenmoon-extension
 ./setup.sh
 ```
 
-## Troubleshooting
+This will:
+1. Update the wenmoon-extension submodule to the latest version
+2. Install dependencies and build the extension
+3. Copy the new `dist` folder to the root directory
 
-- **Git not found**: Install git using your package manager
-- **Yarn not found**: Install yarn using `npm install -g yarn` or your package manager
-- **SSH key issues**: Make sure your SSH key is added to your GitHub account
-- **Build failures**: Check the console output for specific error messages from the build process
-- **Submodule issues**: Run `git submodule init` and `git submodule update` manually
-- **"No such file or directory" error**: Make sure you've added the submodule with `git submodule add` 
+## Support
+
+- **Installation issues**: See `CHROME_EXTENSION_README.md`
+- **Extension problems**: Check the Chrome DevTools console
+- **Build issues**: Contact the development team 
