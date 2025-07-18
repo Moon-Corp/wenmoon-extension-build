@@ -37,8 +37,11 @@ This guide explains how to load the pre-built wenmoon-extension as an unpacked C
 
 Once loaded, the wenmoon extension will:
 
-- [List specific features of your extension here]
-- [Add any configuration or usage instructions]
+- **Solana Wallet Authentication**: Connect your Solana wallet (like Phantom, Solflare, etc.) to authenticate with the extension
+- **Twitter/X Integration**: Seamlessly launch tokens directly from Twitter/X posts
+- **One-Click Token Launching**: Click on token links in Twitter/X to launch them instantly through your connected wallet
+- **Secure Wallet Connection**: Safely connect your Solana wallet without compromising your private keys
+- **Cross-Platform Support**: Works across different Solana wallet providers
 
 ## Troubleshooting
 
@@ -53,6 +56,7 @@ Once loaded, the wenmoon extension will:
 - **Extension icon not visible**: Click the puzzle piece icon in the toolbar to see all extensions
 - **Extension disabled**: Check the extensions page and ensure it's enabled
 - **Extension not responding**: Try reloading the extension by clicking the refresh icon
+- **Wallet not connecting**: Make sure you have a Solana wallet extension installed (Phantom, Solflare, etc.)
 
 ### Updating the Extension
 
