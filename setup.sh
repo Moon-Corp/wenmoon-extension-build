@@ -17,9 +17,9 @@ if ! command -v yarn &> /dev/null; then
     exit 1
 fi
 
-echo "📦 Initializing and updating Git submodules..."
+echo "📦 Updating Git submodules to latest version..."
 git submodule init
-git submodule update
+git submodule update --remote
 
 echo "📁 Entering wenmoon-extension directory..."
 cd wenmoon-extension
