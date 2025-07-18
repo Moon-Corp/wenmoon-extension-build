@@ -1,0 +1,3 @@
+[submodule "wenmoon-extension"]
+	path = wenmoon-extension
+	url = git@github.com:Moon-Corp/wenmoon-extension.git

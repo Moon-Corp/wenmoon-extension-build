@@ -10,9 +10,28 @@ Before running the setup script, make sure you have the following installed:
 - **Yarn**: For installing dependencies and building the extension
 - **SSH Key**: Configured with GitHub for accessing the private repository
 
+## Initial Setup
+
+If you're setting up this repository for the first time, follow these steps:
+
+1. **Initialize Git repository** (if not already done):
+   ```bash
+   git init
+   ```
+
+2. **Add the wenmoon-extension submodule**:
+   ```bash
+   git submodule add git@github.com:Moon-Corp/wenmoon-extension.git wenmoon-extension
+   ```
+
+3. **Run the setup script**:
+   ```bash
+   ./setup.sh
+   ```
+
 ## Usage
 
-To set up the wenmoon-extension, simply run:
+After the initial setup, you can simply run:
 
 ```bash
 ./setup.sh
@@ -52,4 +71,5 @@ git submodule update --remote wenmoon-extension
 - **Yarn not found**: Install yarn using `npm install -g yarn` or your package manager
 - **SSH key issues**: Make sure your SSH key is added to your GitHub account
 - **Build failures**: Check the console output for specific error messages from the build process
-- **Submodule issues**: Run `git submodule init` and `git submodule update` manually 
+- **Submodule issues**: Run `git submodule init` and `git submodule update` manually
+- **"No such file or directory" error**: Make sure you've added the submodule with `git submodule add` 

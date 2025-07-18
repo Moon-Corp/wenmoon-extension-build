@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Token Launcher Side Panel</title>
+    <link href="/dist/styles.css" rel="stylesheet">
+    <script src="js/vendor.js"></script>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: auto !important;
+        box-sizing: border-box;
+        background: linear-gradient(to bottom right, #111827, #1f2937, #000000);
+        scrollbar-color: #374151 transparent;
+        scrollbar-width: thin;
+      }
+      
+      #root {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: calc(100vw - 100%);
+      }
+      
+      /* Webkit scrollbar styling */
+      ::-webkit-scrollbar {
+        width: 8px;
+        background: transparent;
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background: #374151;
+        border-radius: 4px;
+      }
+      
+      ::-webkit-scrollbar-thumb:hover {
+        background: #4b5563;
+      }
+      
+      ::-webkit-scrollbar-corner {
+        background: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="js/sidepanel.js"></script>
+  </body>
+</html>
