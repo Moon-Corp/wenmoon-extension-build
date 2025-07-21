@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "update_url": "https://clients2.google.com/service/update2/crx",
-  "name": "WENMOON",
+  "name": "WENMOON: 1-Click Token Launcher",
   "short_name": "WENMOON",
   "description": "Wenmoon is a revolutionary token launcher on Solana.",
   "version": "0.0.1",
@@ -21,16 +21,16 @@
       "128": "icons/icon128.png"
     },
     "default_popup": "popup.html",
-    "default_title": "WENMOON"
+    "default_title": "WENMOON: 1-Click Token Launcher"
   },
 
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": ["https://twitter.com/*", "https://x.com/*", "https://api.wenmoon.gg/*"],
       "js": ["js/vendor.js"]
     },
     {
-      "matches": ["<all_urls>"],
+      "matches": ["https://twitter.com/*", "https://x.com/*", "https://api.wenmoon.gg/*"],
       "js": ["js/content_script.js"],
       "run_at": "document_end"
     }
@@ -44,7 +44,7 @@
 
   "permissions": ["storage", "activeTab", "scripting", "tabs", "webNavigation", "sidePanel"],
 
-  "host_permissions": ["<all_urls>"],
+  "host_permissions": ["https://twitter.com/*", "https://x.com/*", "https://api.wenmoon.gg/*"],
 
   "side_panel": {
     "default_path": "sidepanel.html"
@@ -53,19 +53,19 @@
   "web_accessible_resources": [
     {
       "resources": ["js/injected.js"],
-      "matches": ["<all_urls>"]
+      "matches": ["https://twitter.com/*", "https://x.com/*", "https://api.wenmoon.gg/*"]
     },
     {
       "resources": ["bs58.bundle.js"],
-      "matches": ["<all_urls>"]
+      "matches": ["https://twitter.com/*", "https://x.com/*", "https://api.wenmoon.gg/*"]
     },
     {
       "resources": ["js/fun_connect.js"],
-      "matches": ["<all_urls>"]
+      "matches": ["https://twitter.com/*", "https://x.com/*", "https://api.wenmoon.gg/*"]
     },
     {
       "resources": ["icons/*"],
-      "matches": ["<all_urls>"]
+      "matches": ["https://twitter.com/*", "https://x.com/*", "https://api.wenmoon.gg/*"]
     }
   ]
 }
