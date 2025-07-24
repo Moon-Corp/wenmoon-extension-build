@@ -42,7 +42,7 @@
     "persistence": true
   },
 
-  "permissions": ["storage", "activeTab", "scripting", "tabs", "webNavigation", "sidePanel"],
+  "permissions": ["storage", "activeTab", "tabs", "webNavigation", "sidePanel"],
 
   "host_permissions": ["https://twitter.com/*", "https://x.com/*", "https://api.wenmoon.gg/*"],
 
